@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-repo/appium-framework.git'
+                git 'https://github.com/sameer480/appium-framework.git'
             }
         }
 
