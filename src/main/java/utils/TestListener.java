@@ -16,7 +16,6 @@ public class TestListener implements ITestListener {
         testThread.set(test);
     }
 
-    // ✅ PASS case
     @Override
     public void onTestSuccess(ITestResult result) {
         testThread.get().pass("Test Passed ✅");
@@ -30,7 +29,6 @@ public class TestListener implements ITestListener {
         }
     }
 
-    // ❌ FAIL case
     @Override
     public void onTestFailure(ITestResult result) {
         testThread.get().fail(result.getThrowable());
@@ -44,19 +42,17 @@ public class TestListener implements ITestListener {
         }
     }
 
-    // ⚠️ SKIP case
     @Override
     public void onTestSkipped(ITestResult result) {
         testThread.get().skip("Test Skipped ⚠️");
     }
 
-    // ✅ Flush report
+
     @Override
     public void onFinish(ITestContext context) {
         extent.flush();
     }
 
-    // 🔥 Getter to use in test classes
     public static ExtentTest getTest() {
         return testThread.get();
     }
