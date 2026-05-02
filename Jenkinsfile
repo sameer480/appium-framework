@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven3'   // configure in Jenkins
-        jdk 'Java17'     // configure in Jenkins
-    }
 
     environment {
         ANDROID_HOME = 'C:\\Users\\Sameer\\AppData\\Local\\Android\\Sdk'
