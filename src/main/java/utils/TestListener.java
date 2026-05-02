@@ -1,11 +1,8 @@
-package listeners;
+package utils;
 
 import com.aventstack.extentreports.*;
 import io.appium.java_client.AppiumDriver;
 import org.testng.*;
-import utils.DriverManager;
-import utils.ExtentManager;
-import utils.ScreenshotUtil;
 
 public class TestListener implements ITestListener {
 

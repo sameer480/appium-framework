@@ -1,18 +1,16 @@
 package tests;
 
 import base.BaseTest;
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utils.DriverManager;
 import utils.RetryAnalyzer;
+import utils.TestListener;
 
 
-
-
-   @Listeners(listeners.TestListener.class)
+@Listeners(TestListener.class)
     public class HomeTest extends BaseTest {
 
         @Test(retryAnalyzer = RetryAnalyzer.class)
