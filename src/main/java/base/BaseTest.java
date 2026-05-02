@@ -35,3 +35,4 @@ public class BaseTest {
         DriverManager.getDriver().quit();
     }
 }
+//adb shell dumpsys window | findstr mCurrentFocus
